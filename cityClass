@@ -1,0 +1,46 @@
+
+public class City {
+	private String CityName;
+	private String countryName;
+	private double[] averageMonthlyRainfall;
+	 
+	
+	
+	
+	public  City(String CityName,String countryName) {
+		this.CityName = CityName;
+		this.countryName = countryName;
+	}
+	
+	
+	public String getCityName() {
+		return this.CityName;
+	}
+	
+	
+	
+	public String getCountryName() {
+		return this.countryName;
+	}
+	
+	
+	
+	public double[] getAverageMonthlyRainfall() {
+		double [] a = new double[averageMonthlyRainfall.length];
+		for(int i=0;i<a.length;i++) {
+			a[i] = averageMonthlyRainfall[i];
+		}
+		
+		return a;
+	}
+	
+	
+	
+	
+	public void addMonthlyAverageRainfall(double rainfall)throws IllegalArgumentException{
+		if(rainfall <= 0){
+			throw new IllegalArgumentException(" Invalid average monthly rainfall");
+		}
+	}
+
+}
